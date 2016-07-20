@@ -23,12 +23,14 @@ var run = Ember.run;
  *    properties can be computed properties or just plain JavaScript values.
  */
 var Select2Component = Ember.Component.extend({
+  classNameBindings: ["inputSize"],
   tagName: "input",
   attributeBindings: ["style", "tabindex"],
   style: Ember.String.htmlSafe("display: hidden;"),
   tabindex: 0,
 
   // Bindings that may be overwritten in the template
+  inputSize: 'input-md',
   cssClass: null,
   optionIdPath: "id",
   optionValuePath: null,
